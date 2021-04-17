@@ -146,7 +146,7 @@ class ArrayCode
 	}
 	public int largestSumSubArray(int arr[])
 	{
-		ArrayList<Integer> a = new ArrayList<Integer>();
+		int maximum=arr[0];
 		for(int k=0;k<arr.length;k++)
 		{
 			for(int i=k;i<arr.length;i++)
@@ -155,15 +155,12 @@ class ArrayCode
 				for(int j=k;j<=i;j++)
 				{
 					sum+=arr[j];
-					a.add(sum);
+					if(sum>maximum)
+						maximum=sum;
 				}
 			}
 		}
-		int max=a.get(0);
-		for(int i=1;i<a.size();i++)
-			if(a.get(i)>max)
-				max=a.get(i);
-		return max;
+		return maximum;
 	}
 	public static void main(String[] args)
 	{
