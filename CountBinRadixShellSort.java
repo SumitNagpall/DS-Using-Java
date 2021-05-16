@@ -73,7 +73,7 @@ class CountBinRadixShellSort
 	}
 	public void radixSort(int arr[])
 	{
-		Node nodeArray[] = new Node[arr.length];
+		Node nodeArray[] = new Node[10]; //Radix -> Decimal Value
 		
 		for(int k=0;k<(int)Math.log10(23)+1;k++)
 		{
@@ -168,7 +168,7 @@ class CountBinRadixShellSort
 		int arr1[]={5,4,2,5,3,1,2};
 		cbrs.binBucketSort(arr1);
 		cbrs.display(arr1);
-		int arr2[]={9,8,7,6,5,4,3,2,1,1,2,3,4,5};
+		int arr2[]={9,8,7};
 		cbrs.radixSort(arr2);
 		cbrs.display(arr2);
 		int arr3[]={9,8,7,6,5,4,3,2,1,1,2,3,4,5};
